@@ -3,6 +3,7 @@ package fabiomarras.u5w1d2.entities;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
+import org.springframework.stereotype.Component;
 
 import java.util.List;
 @Getter

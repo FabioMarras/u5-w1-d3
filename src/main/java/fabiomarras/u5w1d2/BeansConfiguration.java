@@ -2,9 +2,7 @@ package fabiomarras.u5w1d2;
 
 import fabiomarras.u5w1d2.entities.*;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.PropertySource;
+import org.springframework.context.annotation.*;
 import org.springframework.context.support.PropertySourcesPlaceholderConfigurer;
 
 import java.time.LocalDate;
@@ -14,11 +12,13 @@ import java.util.List;
 
 @Configuration
 @PropertySource("application.properties")
+@ComponentScan("fabiomarras.u5w1d2")
 public class BeansConfiguration {
 
     //PIZZE
 
     @Bean
+    @Primary
     Pizzas PizzaIMargherita() {
         List<Toppings> margheritaToppings = Arrays.asList();
         return new Pizzas("Margherita",  1104,4.99 , margheritaToppings);
