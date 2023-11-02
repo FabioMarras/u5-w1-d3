@@ -9,10 +9,10 @@ import lombok.ToString;
 @Setter
 public class Drinks {
     private String name;
-    private String calories;
+    private int calories;
     private double price;
 
-    public Drinks(String name, String calories, double price) {
+    public Drinks(String name, int calories, double price) {
         this.name = name;
         this.calories = calories;
         this.price = price;

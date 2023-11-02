@@ -1,6 +1,7 @@
 package fabiomarras.u5w1d2;
 
 import fabiomarras.u5w1d2.entities.*;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.*;
 import org.springframework.context.support.PropertySourcesPlaceholderConfigurer;
@@ -48,17 +49,17 @@ public class BeansConfiguration {
     //DRINKS
     @Bean
     public Drinks lemonade() {
-        return new Drinks("Lemonade", "128", 1.29);
+        return new Drinks("lemonade", 128, 1.29);
     }
 
     @Bean
     public Drinks water() {
-        return new Drinks("Water", "0", 1.29);
+        return new Drinks("Water", 0, 1.29);
     }
 
     @Bean
     public Drinks wine() {
-        return new Drinks("Wine", "607", 7.49);
+        return new Drinks("Wine", 607, 7.49);
     }
     @Bean
     public List<Drinks> allDrinks() {
